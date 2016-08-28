@@ -34,7 +34,7 @@ public class CommandResult {
     }
     
     /**
-     *returns the feedback message to be shown to the user. Contains a description of the execution result
+     *Returns the feedback message to be shown to the user. Contains a description of the execution result
      */
     public String getFeedbackToUser() {
     	return feedbackToUser;
