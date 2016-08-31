@@ -13,15 +13,13 @@ package seedu.addressbook.data.person.address;
      public static final String POSTAL_CODE_VALIDATION_REGEX = "\\d+";
  
      private final String value;
-     private boolean isPrivate;
  
      /**
       * Validates given postal code.
       *
       * @throws IllegalValueException if given postal code string is invalid.
       */
-     public PostalCode(String postalCode, boolean isPrivate) throws IllegalValueException {
-    	 this.isPrivate = isPrivate;
+     public PostalCode(String postalCode) throws IllegalValueException {
          if (!isValidPostalCode(postalCode)) {
              throw new IllegalValueException(MESSAGE_POSTAL_CODE_CONSTRAINTS);
         }
@@ -53,7 +51,8 @@ package seedu.addressbook.data.person.address;
          return value.hashCode();
      }   
      
-     public boolean isPrivate() {
- 		return isPrivate;
- 	}
+ 	public String getPostalCode() {
+		return value;
+	} 	
+ 	
  }
