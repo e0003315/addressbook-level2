@@ -25,7 +25,7 @@ public class Street {
 		if (!isValidStreet(street)) {
 			throw new IllegalValueException(MESSAGE_STREET_CONSTRAINTS);
 		}
-		this.value = street;
+		this.value = street.trim();
 	}
 
 	/**

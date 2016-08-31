@@ -25,7 +25,7 @@ public class Unit {
         if (!isValidUnit(unit)) {
             throw new IllegalValueException(MESSAGE_UNIT_CONSTRAINTS);
         }
-        this.value = unit;
+        this.value = unit.trim();
     }
 
     /**
