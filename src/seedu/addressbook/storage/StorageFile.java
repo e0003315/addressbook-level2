@@ -88,6 +88,10 @@ public class StorageFile {
         /* Note: Note the 'try with resource' statement below.
          * More info: https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
          */
+    	if (!path.toFile().isFile()){
+    		throw new StorageOperationException( "Missing file at: " + path);
+    	}
+    	
         try (final Writer fileWriter =
                      new BufferedWriter(new FileWriter(path.toFile()))) {
 
